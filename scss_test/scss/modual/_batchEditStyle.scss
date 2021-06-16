@@ -1,0 +1,68 @@
+//成批編輯
+.batch-edit-style1,
+.batch-edit-style2,
+.batch-edit-style3,
+.batch-edit-style4,
+.batch-edit-style5 {
+    margin-top: 5px;
+
+    th {
+        border-right: 1px solid #FFF;
+        font-weight: bold;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    td {
+
+        &:before {
+            display: none;
+        }
+    }
+
+    th,
+    td {
+        display: table-cell;
+    }
+}
+
+.input-tr,
+.add-tr {
+    position: relative;
+
+    td {
+        position: relative;
+    }
+}
+
+.input-content {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    background: #FFF;
+    position: absolute;
+    top: 0;
+    overflow-x: auto;
+    z-index: z(content, input_content);
+
+    .data_table {
+        border: 0;
+        margin: 0;
+    }
+}
+
+.data_table {
+    th {
+        border-right: 1px solid #FFF;
+
+        &:nth-last-child(1) {
+            border-right: none;
+        }
+    }
+}
+
+.table-om {
+    th {
+        border-right: 1px solid #FFF;
+    }
+}

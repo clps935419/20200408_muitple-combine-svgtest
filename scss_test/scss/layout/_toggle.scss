@@ -1,0 +1,48 @@
+#toggle-btn {
+    display: none;
+
+    &:checked ~ #top {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:checked ~ .left-menu {
+        width: 0;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        overflow-y: unset;
+        top: 0;
+        visibility: hidden;
+    }
+
+    &:checked ~ .home_btn {
+        width: 0;
+        opacity: 0;
+        top: 0;
+        visibility: hidden;
+    }
+
+    &:checked ~ .content {
+        padding-top: 40px; //sys_bg高度
+        padding-left: 0;
+
+        .new-top-msg {
+            top: 45px;
+        }
+
+        .fixed-toolbar {
+            width: calc(100% - 20px);
+            top: 35px;
+        }
+    }
+
+    &:checked ~ .system_bg {
+        top: 0;
+        left: 0;
+
+        .bars {
+            top: 0;
+        }
+    }
+}

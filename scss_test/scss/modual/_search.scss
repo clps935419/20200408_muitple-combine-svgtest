@@ -1,0 +1,89 @@
+//查詢畫面 
+.search {
+    width: 100%;
+    margin-top: 5px;
+    padding: 2px;
+}
+
+.condition {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    width: 90px;
+    border-width: 1px;
+    border-style: solid none solid solid;
+}
+
+.search_form {
+    @include flexbox();
+    width: 100%;
+}
+
+.search_form_table {
+    @include flexbox();
+    @include flexwrap(wrap);
+    width: calc(100% - 90px);
+    border-width: 1px;
+    border-style: solid none none solid;
+}
+
+//查詢條件收合鈕
+.search_arrow {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    width: 60px;
+    height: 16px;
+    border-radius: 0 0 3px 3px;
+    color: #FFF;
+    cursor: pointer;
+    margin: 0 calc((100% - 60px) / 2);
+
+    span {
+        display: block;
+
+        &:before {
+            @include rotate(45deg);
+            width: 10px;
+            height: 2px;
+            background-color: #FFF;
+            border-radius: 3px;
+            content: "";
+            display: block;
+            margin-left: 6px;
+            margin-bottom: -2px;
+        }
+
+        &:after {
+            @include rotate(135deg);
+            width: 10px;
+            height: 2px;
+            background-color: #FFF;
+            border-radius: 3px;
+            content: "";
+            display: block;
+        }
+
+        &:before,
+        &:after {
+            transition-duration: 0.2s;
+            transition-delay: 0.2s, 0s;
+        }
+    }
+}
+
+.search_arrow.active {
+    span {
+        &:before {
+            @include rotate(135deg);
+        }
+
+        &:after {
+            @include rotate(45deg);
+        }
+    }
+}
+
+.search_btn {
+    padding: 3px;
+}
